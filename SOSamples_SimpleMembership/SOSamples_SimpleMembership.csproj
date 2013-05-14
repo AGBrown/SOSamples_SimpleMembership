@@ -187,11 +187,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305141633574_AddCol_UserProfile_Email.cs" />
+    <Compile Include="Migrations\201305141633574_AddCol_UserProfile_Email.Designer.cs">
+      <DependentUpon>201305141633574_AddCol_UserProfile_Email.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SOSamples_SimpleMembership.mdf" />
+    <Content Include="App_Data\SOSamples_SimpleMembership_log.ldf">
+      <DependentUpon>SOSamples_SimpleMembership.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -304,7 +312,9 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201305141633574_AddCol_UserProfile_Email.resx">
+      <DependentUpon>201305141633574_AddCol_UserProfile_Email.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
